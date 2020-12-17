@@ -2,6 +2,8 @@ package App;
 
 import java.util.*;
 
+import Enums.Habilitation;
+
 public class ServeurDiscussion {
 	private String nom;
 	private List<Canal> canaux;

@@ -3,6 +3,7 @@ package App;
 import java.util.*;
 import java.util.Map.Entry;
 
+import Enums.Habilitation;
 import Exception.ActionNonAutoriseeException;
 import Interfaces.Destinataire;
 
@@ -14,8 +15,8 @@ public class Canal implements Comparable<Canal>,Destinataire{
 	private HashMap<Role,List<Habilitation>> mapping_role_habilitation;
 	private List<Message> historiques;
 	
-	public Canal(String nom) {
-		this.nom=nom;
+	public Canal() {
+		this.nom="Canal";
 		this.webhooks=new ArrayList<Webhook>();
 		this.historiques=new ArrayList<Message>();
 		this.mapping_role_habilitation=new HashMap<Role,List<Habilitation>>();
@@ -30,11 +31,15 @@ public class Canal implements Comparable<Canal>,Destinataire{
 		this.mapping_role_utilisateurs = mapping_role_utilisateurs;
 	}
 
-	public HashMap<Role, List<Habilitation>> getMapping_role_habilitation() {
+	public HashMap<Role, List<Habilitation>> getMapping_role_habilitations() {
 		return mapping_role_habilitation;
 	}
 
-	public void setMapping_role_habilitation(HashMap<Role, List<Habilitation>> mapping_role_habilitation) {
+	public List<Message> getHistoriques() {
+		return historiques;
+	}
+
+	public void setMapping_role_habilitations(HashMap<Role, List<Habilitation>> mapping_role_habilitation) {
 		this.mapping_role_habilitation = mapping_role_habilitation;
 	}
 
