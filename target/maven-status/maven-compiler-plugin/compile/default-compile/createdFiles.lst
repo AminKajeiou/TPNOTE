@@ -1,0 +1,9 @@
+App\Webhook.class
+App\Habilitation.class
+App\Message.class
+Exception\ActionNonAutoriseeException.class
+App\Utilisateur.class
+App\Canal.class
+App\Role.class
+App\ServeurDiscussion.class
+Interfaces\Destinataire.class
